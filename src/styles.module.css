@@ -1,9 +1,614 @@
-/* add css module styles here (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700;800&display=swap');
+:root {
+  --primary: 124, 142, 205;
+  --secondary: 165, 48, 104;
+  --success: 9, 176, 98;
+  --info: 76, 134, 201;
+  --danger: 220, 93, 107;
+  --warning: 230, 227, 83;
+  --dark: 18, 18, 18;
+  --light: 237, 237, 237;
+  --black: 0, 0, 0;
+  --white: 255, 255, 255;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: 'Mukta', sans-serif;
+}
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
+/*main button*/
+/*default settings color>>primary, type>>solid, size>>medium*/
+.thd-button {
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: 0.2s all ease-out;
   text-align: center;
 }
+.thd-button:disabled {
+  cursor: default;
+}
+/*SIZES*/
+/*#region small*/
+.thd-button.small {
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  padding: 0.625rem 1rem;
+}
+/*#endregion*/
+
+/*#region medium*/
+.thd-button.medium {
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 0.75rem 1.125rem;
+}
+/*#endregion*/
+
+/*#region large*/
+.thd-button.large {
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  padding: 1rem 1.5rem;
+}
+/*#endregion*/
+
+/*#region block*/
+.thd-button.block{
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  padding: 1rem 1.5rem;
+  width: 100%;
+}
+/*#endregion*/
+
+/*TYPES and COLORS*/
+/*#region ----------------------------type:solid----------------------------*/
+/*#region primary*/
+.thd-button.solid.primary {
+  color: rgb(var(--white));
+  background-color: rgba(var(--primary), 0.8);
+  box-shadow: rgba(var(--primary), 0.16) 0px 3px 6px,
+    rgba(var(--primary), 0.23) 0px 3px 6px;
+  border: 2px solid rgb(var(--primary));
+}
+.thd-button.solid.primary:hover {
+  background-color: rgba(var(--primary), 1);
+  box-shadow: rgba(var(--primary), 0.3) 0px 19px 38px,
+    rgba(var(--primary), 0.22) 0px 15px 12px;
+}
+.thd-button.solid.primary:active {
+  background-color: rgba(var(--primary), 0.8);
+}
+.thd-button.solid.primary:disabled {
+  color: rgba(var(--primary), 0.4);
+  background-color: rgba(var(--primary), 0.2);
+  border: 2px solid rgba(var(--primary), 0.3);
+  box-shadow: none;
+}
+/*#endregion*/
+
+/*#region secondary*/
+.thd-button.solid.secondary {
+  color: rgb(var(--white));
+  background-color: rgba(var(--secondary), 0.8);
+  box-shadow: rgba(var(--secondary), 0.16) 0px 3px 6px,
+    rgba(var(--secondary), 0.23) 0px 3px 6px;
+  border: 2px solid rgb(var(--secondary));
+}
+.thd-button.solid.secondary:hover {
+  background-color: rgba(var(--secondary), 1);
+  box-shadow: rgba(var(--secondary), 0.3) 0px 19px 38px,
+    rgba(var(--secondary), 0.22) 0px 15px 12px;
+}
+.thd-button.solid.secondary:active {
+  background-color: rgba(var(--secondary), 0.8);
+}
+.thd-button.solid.secondary:disabled {
+  color: rgba(var(--secondary), 0.4);
+  background-color: rgba(var(--secondary), 0.2);
+  border: 2px solid rgba(var(--secondary), 0.3);
+  box-shadow: none;
+}
+/*#endregion*/
+
+/*#region success*/
+.thd-button.solid.success {
+  color: rgb(var(--white));
+  background-color: rgba(var(--success), 0.8);
+  box-shadow: rgba(var(--success), 0.16) 0px 3px 6px,
+    rgba(var(--success), 0.23) 0px 3px 6px;
+  border: 2px solid rgb(var(--success));
+}
+.thd-button.solid.success:hover {
+  background-color: rgba(var(--success), 1);
+  box-shadow: rgba(var(--success), 0.3) 0px 19px 38px,
+    rgba(var(--success), 0.22) 0px 15px 12px;
+}
+.thd-button.solid.success:active {
+  background-color: rgba(var(--success), 0.8);
+}
+.thd-button.solid.success:disabled {
+  color: rgba(var(--success), 0.4);
+  background-color: rgba(var(--success), 0.2);
+  border: 2px solid rgba(var(--success), 0.3);
+  box-shadow: none;
+}
+/*#endregion*/
+
+/*#region info*/
+.thd-button.solid.info {
+  color: rgb(var(--white));
+  background-color: rgba(var(--info), 0.8);
+  box-shadow: rgba(var(--info), 0.16) 0px 3px 6px,
+    rgba(var(--info), 0.23) 0px 3px 6px;
+  border: 2px solid rgb(var(--info));
+}
+.thd-button.solid.info:hover {
+  background-color: rgba(var(--info), 1);
+  box-shadow: rgba(var(--info), 0.3) 0px 19px 38px,
+    rgba(var(--info), 0.22) 0px 15px 12px;
+}
+.thd-button.solid.info:active {
+  background-color: rgba(var(--info), 0.8);
+}
+.thd-button.solid.info:disabled {
+  color: rgba(var(--info), 0.4);
+  background-color: rgba(var(--info), 0.2);
+  border: 2px solid rgba(var(--info), 0.3);
+  box-shadow: none;
+}
+/*#endregion*/
+
+/*#region danger*/
+.thd-button.solid.danger {
+  color: rgb(var(--white));
+  background-color: rgba(var(--danger), 0.8);
+  box-shadow: rgba(var(--danger), 0.16) 0px 3px 6px,
+    rgba(var(--danger), 0.23) 0px 3px 6px;
+  border: 2px solid rgb(var(--danger));
+}
+.thd-button.solid.danger:hover {
+  background-color: rgba(var(--danger), 1);
+  box-shadow: rgba(var(--danger), 0.3) 0px 19px 38px,
+    rgba(var(--danger), 0.22) 0px 15px 12px;
+}
+.thd-button.solid.danger:active {
+  background-color: rgba(var(--danger), 0.8);
+}
+.thd-button.solid.danger:disabled {
+  color: rgba(var(--danger), 0.4);
+  background-color: rgba(var(--danger), 0.2);
+  border: 2px solid rgba(var(--danger), 0.3);
+  box-shadow: none;
+}
+/*#endregion*/
+
+/*#region warning*/
+.thd-button.solid.warning {
+  color: rgb(var(--white));
+  background-color: rgba(var(--warning), 0.8);
+  box-shadow: rgba(var(--warning), 0.16) 0px 3px 6px,
+    rgba(var(--warning), 0.23) 0px 3px 6px;
+  border: 2px solid rgb(var(--warning));
+}
+.thd-button.solid.warning:hover {
+  background-color: rgba(var(--warning), 1);
+  box-shadow: rgba(var(--warning), 0.3) 0px 19px 38px,
+    rgba(var(--warning), 0.22) 0px 15px 12px;
+}
+.thd-button.solid.warning:active {
+  background-color: rgba(var(--warning), 0.8);
+}
+.thd-button.solid.warning:disabled {
+  color: rgba(var(--warning), 0.4);
+  background-color: rgba(var(--warning), 0.2);
+  border: 2px solid rgba(var(--warning), 0.3);
+  box-shadow: none;
+}
+/*#endregion*/
+
+/*#region dark*/
+.thd-button.solid.dark {
+  color: rgb(var(--white));
+  background-color: rgba(var(--dark), 0.8);
+  box-shadow: rgba(var(--dark), 0.16) 0px 3px 6px,
+    rgba(var(--dark), 0.23) 0px 3px 6px;
+  border: 2px solid rgb(var(--dark));
+}
+.thd-button.solid.dark:hover {
+  background-color: rgba(var(--dark), 1);
+  box-shadow: rgba(var(--dark), 0.3) 0px 19px 38px,
+    rgba(var(--dark), 0.22) 0px 15px 12px;
+}
+.thd-button.solid.dark:active {
+  background-color: rgba(var(--dark), 0.8);
+}
+.thd-button.solid.dark:disabled {
+  color: rgba(var(--dark), 0.4);
+  background-color: rgba(var(--dark), 0.2);
+  border: 2px solid rgba(var(--dark), 0.3);
+  box-shadow: none;
+}
+/*#endregion*/
+
+/*#region light*/
+.thd-button.solid.light {
+  color: rgb(var(--black));
+  background-color: rgba(var(--light), 0.8);
+  box-shadow: rgba(var(--light), 0.16) 0px 3px 6px,
+    rgba(var(--light), 0.23) 0px 3px 6px;
+  border: 2px solid rgb(var(--light));
+}
+.thd-button.solid.light:hover {
+  background-color: rgba(var(--light), 1);
+  box-shadow: rgba(var(--light), 0.3) 0px 19px 38px,
+    rgba(var(--light), 0.22) 0px 15px 12px;
+}
+.thd-button.solid.light:active {
+  background-color: rgba(var(--light), 0.8);
+}
+.thd-button.solid.light:disabled {
+  color: rgba(var(--black), 0.4);
+  background-color: rgba(var(--light), 0.2);
+  border: 2px solid rgba(var(--light), 0.3);
+  box-shadow: none;
+}
+/*#endregion*/
+/*#endregion*/
+
+/*#region ----------------------------type:outline----------------------------*/
+.thd-button.outline {
+  background-color: transparent;
+}
+/*#region primary*/
+.thd-button.outline.primary {
+  color: rgb(var(--primary));
+  box-shadow: rgba(var(--primary), 0.16) 0px 3px 6px,
+    rgba(var(--primary), 0.23) 0px 3px 6px;
+  border: 2px solid rgba(var(--primary), 0.7);
+}
+.thd-button.outline.primary:hover {
+  box-shadow: rgba(var(--primary), 0.3) 0px 19px 38px,
+    rgba(var(--primary), 0.22) 0px 15px 12px;
+  background-color: rgba(var(--primary), .25);
+  border: 2px solid rgba(var(--primary), 1);
+}
+.thd-button.outline.primary:active {
+  border: 2px solid rgba(var(--primary), 0.7);
+  background-color: transparent;
+}
+.thd-button.outline.primary:disabled {
+  color: rgba(var(--primary), 0.3);
+  border: 2px solid rgba(var(--primary), 0.3);
+  background-color: transparent;
+  box-shadow: none;
+}
+/*#endregion*/
+
+/*#region secondary*/
+.thd-button.outline.secondary {
+  color: rgb(var(--secondary));
+  box-shadow: rgba(var(--secondary), 0.16) 0px 3px 6px,
+    rgba(var(--secondary), 0.23) 0px 3px 6px;
+  border: 2px solid rgba(var(--secondary), 0.7);
+}
+.thd-button.outline.secondary:hover {
+  box-shadow: rgba(var(--secondary), 0.3) 0px 19px 38px,
+    rgba(var(--secondary), 0.22) 0px 15px 12px;
+  background-color: rgba(var(--secondary),.25);
+  border: 2px solid rgba(var(--secondary), 1);
+}
+.thd-button.outline.secondary:active {
+  border: 2px solid rgba(var(--secondary), 0.7);
+  background-color: transparent;
+}
+.thd-button.outline.secondary:disabled {
+  color: rgba(var(--secondary), 0.3);
+  border: 2px solid rgba(var(--secondary), 0.3);
+  background-color: transparent;
+  box-shadow: none;
+}
+/*#endregion*/
+
+/*#region success*/
+.thd-button.outline.success {
+  color: rgb(var(--success));
+  box-shadow: rgba(var(--success), 0.16) 0px 3px 6px,
+    rgba(var(--success), 0.23) 0px 3px 6px;
+  border: 2px solid rgba(var(--success), 0.7);
+}
+.thd-button.outline.success:hover {
+  box-shadow: rgba(var(--success), 0.3) 0px 19px 38px,
+    rgba(var(--success), 0.22) 0px 15px 12px;
+  background-color: rgba(var(--success), .25);
+  border: 2px solid rgba(var(--success), 1);
+}
+.thd-button.outline.success:active {
+  border: 2px solid rgba(var(--success), 0.7);
+  background-color: transparent;
+}
+.thd-button.outline.success:disabled {
+  color: rgba(var(--success), 0.3);
+  border: 2px solid rgba(var(--success), 0.3);
+  background-color: transparent;
+  box-shadow: none;
+}
+/*#endregion*/
+
+/*#region info*/
+.thd-button.outline.info {
+  color: rgb(var(--info));
+  box-shadow: rgba(var(--info), 0.16) 0px 3px 6px,
+    rgba(var(--info), 0.23) 0px 3px 6px;
+  border: 2px solid rgba(var(--info), 0.7);
+}
+.thd-button.outline.info:hover {
+  box-shadow: rgba(var(--info), 0.3) 0px 19px 38px,
+    rgba(var(--info), 0.22) 0px 15px 12px;
+  background-color: rgba(var(--info), .25);
+  border: 2px solid rgba(var(--info), 1);
+}
+.thd-button.outline.info:active {
+  border: 2px solid rgba(var(--info), 0.7);
+  background-color: transparent;
+}
+.thd-button.outline.info:disabled {
+  color: rgba(var(--info), 0.3);
+  border: 2px solid rgba(var(--info), 0.3);
+  background-color: transparent;
+  box-shadow: none;
+}
+/*#endregion*/
+
+/*#region danger*/
+.thd-button.outline.danger {
+  color: rgb(var(--danger));
+  box-shadow: rgba(var(--danger), 0.16) 0px 3px 6px,
+    rgba(var(--danger), 0.23) 0px 3px 6px;
+  border: 2px solid rgba(var(--danger), 0.7);
+}
+.thd-button.outline.danger:hover {
+  box-shadow: rgba(var(--danger), 0.3) 0px 19px 38px,
+    rgba(var(--danger), 0.22) 0px 15px 12px;
+  background-color: rgba(var(--danger), .25);
+  border: 2px solid rgba(var(--danger), 1);
+}
+.thd-button.outline.danger:active {
+  border: 2px solid rgba(var(--danger), 0.7);
+  background-color: transparent;
+}
+.thd-button.outline.danger:disabled {
+  color: rgba(var(--danger), 0.3);
+  border: 2px solid rgba(var(--danger), 0.3);
+  background-color: transparent;
+  box-shadow: none;
+}
+/*#endregion*/
+
+/*#region warning*/
+.thd-button.outline.warning {
+  color: rgb(var(--warning));
+  box-shadow: rgba(var(--warning), 0.16) 0px 3px 6px,
+    rgba(var(--warning), 0.23) 0px 3px 6px;
+  border: 2px solid rgba(var(--warning), 0.7);
+}
+.thd-button.outline.warning:hover {
+  box-shadow: rgba(var(--warning), 0.3) 0px 19px 38px,
+    rgba(var(--warning), 0.22) 0px 15px 12px;
+  background-color: rgba(var(--warning), .25);
+  border: 2px solid rgba(var(--warning), 1);
+}
+.thd-button.outline.warning:active {
+  border: 2px solid rgba(var(--warning), 0.7);
+  background-color: transparent;
+}
+.thd-button.outline.warning:disabled {
+  color: rgba(var(--warning), 0.3);
+  border: 2px solid rgba(var(--warning), 0.3);
+  background-color: transparent;
+  box-shadow: none;
+}
+/*#endregion*/
+
+/*#region dark*/
+.thd-button.outline.dark {
+  color: rgb(var(--dark));
+  box-shadow: rgba(var(--dark), 0.16) 0px 3px 6px,
+    rgba(var(--dark), 0.23) 0px 3px 6px;
+  border: 2px solid rgba(var(--dark), 0.7);
+}
+.thd-button.outline.dark:hover {
+  box-shadow: rgba(var(--dark), 0.3) 0px 19px 38px,
+    rgba(var(--dark), 0.22) 0px 15px 12px;
+  background-color: rgba(var(--dark), .25);
+  border: 2px solid rgba(var(--dark), 1);
+}
+.thd-button.outline.dark:active {
+  border: 2px solid rgba(var(--dark), 0.7);
+  background-color: transparent;
+}
+.thd-button.outline.dark:disabled {
+  color: rgba(var(--dark), 0.3);
+  border: 2px solid rgba(var(--dark), 0.3);
+  background-color: transparent;
+  box-shadow: none;
+}
+/*#endregion*/
+
+/*#region light*/
+.thd-button.outline.light {
+  color: rgb(var(--light));
+  box-shadow: rgba(var(--light), 0.16) 0px 3px 6px,
+    rgba(var(--light), 0.23) 0px 3px 6px;
+  border: 2px solid rgba(var(--light), 0.7);
+}
+.thd-button.outline.light:hover {
+  box-shadow: rgba(var(--light), 0.3) 0px 19px 38px,
+    rgba(var(--light), 0.22) 0px 15px 12px;
+  background-color: rgba(var(--light), .25);
+  border: 2px solid rgba(var(--light), 1);
+}
+.thd-button.outline.light:active {
+  border: 2px solid rgba(var(--light), 0.7);
+  background-color: transparent;
+}
+.thd-button.outline.light:disabled {
+  color: rgba(var(--light), 0.3);
+  border: 2px solid rgba(var(--light), 0.3);
+  background-color: transparent;
+  box-shadow: none;
+}
+/*#endregion*/
+/*#endregion*/
+
+/*#region ----------------------------type:text----------------------------*/
+.thd-button.text {
+  border: none;
+  box-shadow: none;
+  border: 2px solid transparent;
+}
+/*#region primary*/
+.thd-button.text.primary {
+  color: rgb(var(--primary));
+  background-color: transparent;
+}
+.thd-button.text.primary:hover {
+  background-color: rgba(var(--primary), .3);
+}
+.thd-button.text.primary:active {
+  background-color: rgba(var(--primary), .15);
+}
+.thd-button.text.primary:disabled {
+  color: rgba(var(--primary), 0.3);
+  background-color: transparent;
+}
+/*#endregion*/
+
+/*#region secondary*/
+.thd-button.text.secondary {
+  color: rgb(var(--secondary));
+  background-color: transparent;
+}
+.thd-button.text.secondary:hover {
+  background-color: rgba(var(--secondary), .3);
+}
+.thd-button.text.secondary:active {
+  background-color: rgba(var(--secondary), .15);
+}
+.thd-button.text.secondary:disabled {
+  color: rgba(var(--secondary), 0.3);
+  background-color: transparent;
+}
+/*#endregion*/
+
+/*#region success*/
+.thd-button.text.success {
+  color: rgb(var(--success));
+  background-color: transparent;
+}
+.thd-button.text.success:hover {
+  background-color: rgba(var(--success), .3);
+}
+.thd-button.text.success:active {
+  background-color: rgba(var(--success), .15);
+}
+.thd-button.text.success:disabled {
+  color: rgba(var(--success), 0.3);
+  background-color: transparent;
+}
+/*#endregion*/
+
+/*#region info*/
+.thd-button.text.info {
+  color: rgb(var(--info));
+  background-color: transparent;
+}
+.thd-button.text.info:hover {
+  background-color: rgba(var(--info), .3);
+}
+.thd-button.text.info:active {
+  background-color: rgba(var(--info), .15);
+}
+.thd-button.text.info:disabled {
+  color: rgba(var(--info), 0.3);
+  background-color: transparent;
+}
+/*#endregion*/
+
+/*#region danger*/
+.thd-button.text.danger {
+  color: rgb(var(--danger));
+  background-color: transparent;
+}
+.thd-button.text.danger:hover {
+  background-color: rgba(var(--danger), .3);
+}
+.thd-button.text.danger:active {
+  background-color: rgba(var(--danger), .15);
+}
+.thd-button.text.danger:disabled {
+  color: rgba(var(--danger), 0.3);
+  background-color: transparent;
+}
+/*#endregion*/
+
+/*#region warning*/
+.thd-button.text.warning {
+  color: rgb(var(--warning));
+  background-color: transparent;
+}
+.thd-button.text.warning:hover {
+  background-color: rgba(var(--warning), .3);
+}
+.thd-button.text.warning:active {
+  background-color: rgba(var(--warning), .15);
+}
+.thd-button.text.warning:disabled {
+  color: rgba(var(--warning), 0.3);
+  background-color: transparent;
+}
+/*#endregion*/
+
+/*#region dark*/
+.thd-button.text.dark {
+  color: rgb(var(--dark));
+  background-color: transparent;
+}
+.thd-button.text.dark:hover {
+  background-color: rgba(var(--dark), .3);
+}
+.thd-button.text.dark:active {
+  background-color: rgba(var(--dark), .15);
+}
+.thd-button.text.dark:disabled {
+  color: rgba(var(--dark), 0.3);
+  background-color: transparent;
+}
+/*#endregion*/
+
+/*#region light*/
+.thd-button.text.light {
+  color: rgb(var(--light));
+  background-color: transparent;
+}
+.thd-button.text.light:hover {
+  background-color: rgba(var(--light), .3);
+}
+.thd-button.text.light:active {
+  background-color: rgba(var(--light), .15);
+}
+.thd-button.text.light:disabled {
+  color: rgba(var(--light), 0.3);
+  background-color: transparent;
+}
+/*#endregion*/
+/*#endregion*/

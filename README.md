@@ -10,19 +10,78 @@
 npm install --save thunderui
 ```
 
+## Settings
+
+### Set button text with text property
+
+```jsx
+<Button text="Hello world" />
+```
+
+***
+
+### Colors
+
+![thunderui buttons color](images/colors.png)
+
+#### default color:primary
+
+```jsx
+<Button color="info" />
+```
+
+***
+
+### Types
+
+![thunderui buttons types](images/types.png)
+
+#### default type:solid
+
+```jsx
+<Button type="outline" />
+```
+
+***
+
+### Sizes
+
+![thunderui buttons sizes](images/size.png)
+
+#### default size:medium
+
+```jsx
+<Button size="large" />
+```
+
+***
+
+### Disabled
+
+![thunderui buttons disabled](images/disabled.png)
+
+```jsx
+<Button text="i am disabled" disabled/>
+```
+
+***
+
+### You can set all button properties
+
+```jsx
+<Button onClick={()=> alert("Hello world")} />
+```
+
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'thunderui'
+import {Button} from 'thunderui'
 import 'thunderui/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+export default function Example() {
+  return <Button text="I am thunderui button" />
 ```
 
 ## License
