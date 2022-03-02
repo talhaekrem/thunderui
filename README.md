@@ -22,7 +22,7 @@ npm install --save thunderui
 
 ### Colors
 
-![thunderui buttons color](images/colors.png)
+![thunderui buttons color](https://github.com/talhaekrem/thunderui/blob/master/images/colors.png)
 
 #### default color:primary
 
@@ -34,7 +34,7 @@ npm install --save thunderui
 
 ### Types
 
-![thunderui buttons types](images/types.png)
+![thunderui buttons types](https://github.com/talhaekrem/thunderui/blob/master/images/types.png)
 
 #### default type:solid
 
@@ -46,7 +46,7 @@ npm install --save thunderui
 
 ### Sizes
 
-![thunderui buttons sizes](images/size.png)
+![thunderui buttons sizes](https://github.com/talhaekrem/thunderui/blob/master/images/size.png)
 
 #### default size:medium
 
@@ -58,7 +58,7 @@ npm install --save thunderui
 
 ### Disabled
 
-![thunderui buttons disabled](images/disabled.png)
+![thunderui buttons disabled](https://github.com/talhaekrem/thunderui/blob/master/images/disabled.png)
 
 ```jsx
 <Button text="i am disabled" disabled/>
